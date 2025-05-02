@@ -23,12 +23,18 @@ const Header = () => {
 
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
-            {isLoggedIn && (
+            {isLoggedIn && (<>
               <li className="nav-item">
                 <Link className="nav-link" to="/">
                   Home
                 </Link>
               </li>
+              <li className="nav-item">
+              <Link className="nav-link" to="/orders">
+                Orders
+              </Link>
+            </li>
+            </>
             )}
 
             {isLoggedIn && (

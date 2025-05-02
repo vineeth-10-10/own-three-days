@@ -51,8 +51,8 @@ const Auth = () => {
     <div className="container mt-5" style={{ maxWidth: "400px" }}>
       <h1 className="text-centered mb-4">{isLogin ? "Login" : "SignUp"}</h1>
       <form onSubmit={handleSubmit}>
-        <div class="mb-3">
-          <label for="inputEmail" className="form-label">
+        <div className="mb-3">
+          <label htmlFor="inputEmail" className="form-label">
             Email Address
           </label>
           <input
@@ -63,8 +63,8 @@ const Auth = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
-        <div class="mb-3">
-          <label for="inputPassword" className="form-label">
+        <div className="mb-3">
+          <label htmlFor="inputPassword" className="form-label">
             Password
           </label>
           <input
@@ -76,8 +76,8 @@ const Auth = () => {
           />
         </div>
         {!isLogin && (
-          <div class="mb-3">
-            <label for="inputPassword" className="form-label">
+          <div className="mb-3">
+            <label htmlFor="inputPassword" className="form-label">
               Confirm Password
             </label>
             <input

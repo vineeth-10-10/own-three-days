@@ -22,15 +22,17 @@ const authSlice = createSlice({
 
       localStorage.removeItem("idToken");
     },
-    LoginStatus: (state) => {
-      const token = localStorage.getItem("idToken");
-      if (token) {
-        state.isLoggedIn = true;
-        state.idToken = token;
-      }
-    },
+    
   },
 });
 
-export const { login, logout, LoginStatus } = authSlice.actions;
+export const { login, logout } = authSlice.actions;
+
+export const  LoginStatus= ()=>(dispatch) => {
+  const token = localStorage.getItem("idToken");
+  if (token) {
+   dispatch(login(token));
+  }
+}
+
 export default authSlice.reducer;
